@@ -39,11 +39,12 @@
   .back img{ object-fit:cover; }
 
   .flip-btn{ position:absolute; top:-18px; right:10px; z-index:5;
-    width:40px; height:40px; border:none; border-radius:50%;
-    background:#22335a; color:#fff;
+    width:40px; height:40px; border:1px solid rgba(255,255,255,.45); border-radius:50%;
+    background:rgba(34,51,90,.32); color:#fff;
+    -webkit-backdrop-filter:blur(10px) saturate(140%); backdrop-filter:blur(10px) saturate(140%);
     display:flex; align-items:center; justify-content:center; cursor:pointer;
-    box-shadow:0 4px 12px rgba(0,0,0,.32); transition:transform .12s, background .12s; }
-  .flip-btn:active{ background:#16223a; transform:scale(.93); }
+    box-shadow:0 4px 12px rgba(0,0,0,.22); transition:transform .12s, background .12s; }
+  .flip-btn:active{ background:rgba(34,51,90,.5); transform:scale(.93); }
   .flip-btn svg{ width:21px; height:21px; }
 
   .guide{ margin-top:16px; text-align:center;
