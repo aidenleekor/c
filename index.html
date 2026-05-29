@@ -38,14 +38,13 @@
   .back{ transform:rotateY(180deg); }
   .back img{ object-fit:cover; }
 
-  .flip-btn{ position:absolute; top:10px; right:10px; z-index:5;
-    width:38px; height:38px; border:1px solid rgba(255,255,255,.45); border-radius:50%;
-    background:rgba(120,140,180,.18); color:#1f2d4d;
-    -webkit-backdrop-filter:blur(9px) saturate(130%); backdrop-filter:blur(9px) saturate(130%);
+  .flip-btn{ position:absolute; top:9px; right:9px; z-index:5;
+    width:40px; height:40px; border:none; border-radius:50%;
+    background:#22335a; color:#fff;
     display:flex; align-items:center; justify-content:center; cursor:pointer;
-    box-shadow:0 2px 10px rgba(0,0,0,.12); }
-  .flip-btn:active{ background:rgba(120,140,180,.38); }
-  .flip-btn svg{ width:20px; height:20px; }
+    box-shadow:0 4px 12px rgba(0,0,0,.32); transition:transform .12s, background .12s; }
+  .flip-btn:active{ background:#16223a; transform:scale(.93); }
+  .flip-btn svg{ width:21px; height:21px; }
 
   .guide{ margin-top:16px; text-align:center;
     font-size:14.5px; font-weight:500; color:rgba(255,255,255,.68); line-height:1.55; }
