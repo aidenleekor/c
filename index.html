@@ -33,14 +33,15 @@
     box-shadow:0 10px 30px rgba(26,42,74,.18); }
   .face img{ width:100%; height:100%; object-fit:contain; display:block; }
   .back{ transform:rotateY(180deg); }
+  .back img{ object-fit:cover; }
 
   .flip-btn{ position:absolute; top:10px; right:10px; z-index:5;
-    width:38px; height:38px; border:none; border-radius:50%;
-    background:rgba(26,42,74,.32); color:#fff;
-    -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px);
+    width:38px; height:38px; border:1px solid rgba(255,255,255,.45); border-radius:50%;
+    background:rgba(120,140,180,.18); color:#1f2d4d;
+    -webkit-backdrop-filter:blur(9px) saturate(130%); backdrop-filter:blur(9px) saturate(130%);
     display:flex; align-items:center; justify-content:center; cursor:pointer;
-    box-shadow:0 2px 8px rgba(0,0,0,.15); }
-  .flip-btn:active{ background:rgba(26,42,74,.55); }
+    box-shadow:0 2px 10px rgba(0,0,0,.12); }
+  .flip-btn:active{ background:rgba(120,140,180,.38); }
   .flip-btn svg{ width:20px; height:20px; }
 
   .guide{ margin-top:18px; padding:18px; text-align:center;
@@ -54,10 +55,10 @@
   <div class="wrap">
     <div class="flip" id="flip">
       <button class="flip-btn" id="flipBtn" type="button" aria-label="명함 뒤집기" title="명함 뒤집기">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="6" width="11" height="13" rx="2"/>
-          <path d="M14 9.5a5.5 5.5 0 0 1 6.5 5.4"/>
-          <polyline points="20.8 11.2 20.8 15 17 14.6"/>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="2.5" x2="12" y2="21.5" stroke-dasharray="2.2 2.2"/>
+          <path d="M9.5 6.5 L4 12 L9.5 17.5 Z"/>
+          <path d="M14.5 6.5 L20 12 L14.5 17.5 Z"/>
         </svg>
       </button>
       <div class="flip-inner">
