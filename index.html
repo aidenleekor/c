@@ -36,10 +36,12 @@
 
   .flip-btn{ position:absolute; top:10px; right:10px; z-index:5;
     width:38px; height:38px; border:none; border-radius:50%;
-    background:rgba(26,42,74,.85); color:#fff; font-size:18px; line-height:1;
+    background:rgba(26,42,74,.32); color:#fff;
+    -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px);
     display:flex; align-items:center; justify-content:center; cursor:pointer;
-    box-shadow:0 3px 10px rgba(0,0,0,.2); }
-  .flip-btn:active{ background:rgba(26,42,74,1); }
+    box-shadow:0 2px 8px rgba(0,0,0,.15); }
+  .flip-btn:active{ background:rgba(26,42,74,.55); }
+  .flip-btn svg{ width:20px; height:20px; }
 
   .guide{ margin-top:18px; padding:18px; text-align:center;
     background:#1a2a4a; border-radius:14px;
@@ -51,13 +53,19 @@
 <body>
   <div class="wrap">
     <div class="flip" id="flip">
-      <button class="flip-btn" id="flipBtn" type="button" aria-label="명함 뒤집기" title="명함 뒤집기">⟳</button>
+      <button class="flip-btn" id="flipBtn" type="button" aria-label="명함 뒤집기" title="명함 뒤집기">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="6" width="11" height="13" rx="2"/>
+          <path d="M14 9.5a5.5 5.5 0 0 1 6.5 5.4"/>
+          <polyline points="20.8 11.2 20.8 15 17 14.6"/>
+        </svg>
+      </button>
       <div class="flip-inner">
         <div class="face front"><img src="card.jpg" alt="이상배 부산일보 기자 디지털 명함"></div>
         <div class="face back"><img src="card-real.jpg" alt="이상배 부산일보 기자 실물 명함"></div>
       </div>
     </div>
-    <p class="guide">명함을 <b>길게 눌러</b> '사진에 저장'을 선택하세요.<br>오른쪽 위 <b>⟳</b> 버튼으로 실물 명함을 볼 수 있어요.</p>
+    <p class="guide">명함을 <b>길게 눌러</b> '사진에 저장'을 선택하세요.</p>
   </div>
 
 <script>
