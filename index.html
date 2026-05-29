@@ -50,17 +50,14 @@
     box-shadow:0 6px 16px rgba(26,42,74,.25); }
   .guide b{ color:#9ec3ff; }
 
-  .links{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; align-items:stretch; }
+  .links{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:36px; align-items:stretch; }
   .col-left{ display:grid; grid-template-rows:repeat(3,1fr); gap:10px; }
-  .lbtn{ display:flex; align-items:center; justify-content:center; gap:8px;
+  .lbtn{ display:flex; align-items:center; justify-content:flex-start; gap:9px;
     background:#fff; border:1px solid #e0e5ee; border-radius:14px; text-decoration:none;
-    color:#1a2a4a; font-size:14px; font-weight:700; text-align:center; padding:10px 8px;
-    box-shadow:0 4px 12px rgba(26,42,74,.06); line-height:1.3; }
+    color:#1a2a4a; font-size:13.5px; font-weight:700; text-align:left; padding:10px 11px;
+    box-shadow:0 4px 12px rgba(26,42,74,.06); line-height:1.25; }
   .lbtn:active{ background:#f3f6fb; }
-  .lbtn .dot{ width:9px; height:9px; border-radius:50%; flex:0 0 9px; }
-  .lbtn.notion .dot{ background:#111; }
-  .lbtn.insta .dot{ background:#E1306C; }
-  .lbtn.naver .dot{ background:#03C75A; }
+  .lbtn .ic{ width:22px; height:22px; flex:0 0 22px; }
   .book{ display:block; border-radius:14px; overflow:hidden;
     box-shadow:0 8px 20px rgba(26,42,74,.15); }
   .book img{ width:100%; height:100%; object-fit:cover; display:block; }
@@ -85,9 +82,12 @@
 
     <div class="links">
       <div class="col-left">
-        <a class="lbtn notion" href="https://www.notion.so/aidenleekor/20ff128f4b0581d6b095e4788cab373a" target="_blank" rel="noopener"><span class="dot"></span>노션</a>
-        <a class="lbtn insta" href="https://www.instagram.com/baesang2_?igsh=MXNsZzFyNmN4OGxkMw%3D%3D&utm_source=qr" target="_blank" rel="noopener"><span class="dot"></span>인스타그램</a>
-        <a class="lbtn naver" href="https://media.naver.com/journalist/082/72835" target="_blank" rel="noopener"><span class="dot"></span>네이버 기자페이지</a>
+        <a class="lbtn notion" href="https://www.notion.so/aidenleekor/20ff128f4b0581d6b095e4788cab373a" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="#fff" stroke="#111" stroke-width="1.4"/><path d="M8 17V7l8 10V7" stroke="#111" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>노션</a>
+        <a class="lbtn insta" href="https://www.instagram.com/baesang2_?igsh=MXNsZzFyNmN4OGxkMw%3D%3D&utm_source=qr" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#F58529"/><stop offset=".5" stop-color="#DD2A7B"/><stop offset="1" stop-color="#8134AF"/></linearGradient></defs><rect x="2.5" y="2.5" width="19" height="19" rx="6" fill="none" stroke="url(#ig)" stroke-width="2.1"/><circle cx="12" cy="12" r="4.7" fill="none" stroke="url(#ig)" stroke-width="2.1"/><circle cx="17.5" cy="6.5" r="1.3" fill="url(#ig)"/></svg>인스타그램</a>
+        <a class="lbtn naver" href="https://media.naver.com/journalist/082/72835" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="#03C75A"/><path d="M8.3 17V7h2.2l3 4.6V7H17v10h-2.2l-3-4.6V17z" fill="#fff"/></svg>네이버 기자페이지</a>
       </div>
       <a class="book" href="https://product.kyobobook.co.kr/detail/S000202500518" target="_blank" rel="noopener">
         <img src="book.jpg" alt="산복빨래방 책">
