@@ -19,11 +19,9 @@
 <meta name="twitter:image" content="https://aidenleekor.github.io/c/card.jpg">
 <style>
   *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; margin:0; padding:0; }
-  body{ background:#0d1526;
-    background:linear-gradient(165deg,#1b2c4d 0%,#0d1526 70%);
-    min-height:100vh; display:flex; justify-content:center;
+  body{ background:#eef1f6; min-height:100vh; display:flex; justify-content:center;
     font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI",Roboto,sans-serif; }
-  .wrap{ width:100%; max-width:430px; padding:44px 18px 48px; }
+  .wrap{ width:100%; max-width:430px; padding:24px 18px 40px; }
 
   .flip{ position:relative; perspective:1400px; }
   .flip-inner{ position:relative; width:100%; aspect-ratio:1280/717;
@@ -31,8 +29,8 @@
   .flip.flipped .flip-inner{ transform:rotateY(180deg); }
   .face{ position:absolute; inset:0; width:100%; height:100%;
     -webkit-backface-visibility:hidden; backface-visibility:hidden;
-    border-radius:18px; overflow:hidden; background:#fff;
-    box-shadow:0 22px 50px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.06); }
+    border-radius:16px; overflow:hidden; background:#fff;
+    box-shadow:0 10px 30px rgba(26,42,74,.18); }
   .face img{ width:100%; height:100%; object-fit:contain; display:block; }
   .back{ transform:rotateY(180deg); }
   .back img{ object-fit:cover; }
@@ -46,22 +44,23 @@
   .flip-btn:active{ background:rgba(120,140,180,.38); }
   .flip-btn svg{ width:20px; height:20px; }
 
-  .guide{ margin-top:16px; text-align:center;
-    font-size:13px; font-weight:500; color:rgba(255,255,255,.62); line-height:1.6; }
-  .guide b{ color:#9ec3ff; font-weight:700; }
+  .guide{ margin-top:18px; padding:18px; text-align:center;
+    background:#1a2a4a; border-radius:14px;
+    font-size:16px; font-weight:600; color:#fff; line-height:1.6;
+    box-shadow:0 6px 16px rgba(26,42,74,.25); }
+  .guide b{ color:#9ec3ff; }
 
-  .divider{ border:none; border-top:1.4px dashed rgba(255,255,255,.18); margin:34px 6px; }
+  .divider{ border:none; border-top:1.6px dashed rgba(26,42,74,.3); margin:38px 6px; }
   .links{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:0; align-items:stretch; }
   .col-left{ display:grid; grid-template-rows:repeat(3,1fr); gap:10px; }
   .lbtn{ display:flex; align-items:center; justify-content:flex-start; gap:9px;
-    background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); border-radius:14px;
-    -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); text-decoration:none;
-    color:rgba(255,255,255,.92); font-size:13.5px; font-weight:700; text-align:left; padding:10px 11px;
-    line-height:1.25; }
-  .lbtn:active{ background:rgba(255,255,255,.16); }
-  .lbtn .ic{ width:22px; height:22px; flex:0 0 22px; border-radius:5px; }
+    background:#fff; border:1px solid #e0e5ee; border-radius:14px; text-decoration:none;
+    color:#1a2a4a; font-size:13.5px; font-weight:700; text-align:left; padding:10px 11px;
+    box-shadow:0 4px 12px rgba(26,42,74,.06); line-height:1.25; }
+  .lbtn:active{ background:#f3f6fb; }
+  .lbtn .ic{ width:22px; height:22px; flex:0 0 22px; }
   .book{ display:block; border-radius:14px; overflow:hidden;
-    box-shadow:0 10px 24px rgba(0,0,0,.4); }
+    box-shadow:0 8px 20px rgba(26,42,74,.15); }
   .book img{ width:100%; height:100%; object-fit:cover; display:block; }
 </style>
 </head>
