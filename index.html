@@ -12,40 +12,16 @@
   .wrap{ width:100%; max-width:430px; padding:24px 18px 40px; }
   .card-img{ width:100%; border-radius:16px; display:block;
     box-shadow:0 10px 30px rgba(26,42,74,.18); }
-  .save{ display:block; margin-top:18px; padding:18px; text-align:center;
-    background:#2a5db0; color:#fff; font-size:17px; font-weight:700;
-    border-radius:14px; text-decoration:none; cursor:pointer; border:none; width:100%;
-    box-shadow:0 6px 16px rgba(42,93,176,.3); }
-  .save:active{ background:#234e96; }
-  .hint{ text-align:center; font-size:12px; color:#6b7280; margin-top:12px; line-height:1.6; }
+  .guide{ margin-top:18px; padding:16px 18px; text-align:center;
+    background:#fff; border:1px solid #e0e5ee; border-radius:14px;
+    font-size:15px; font-weight:600; color:#1a2a4a; line-height:1.6; }
+  .guide b{ color:#2a5db0; }
 </style>
 </head>
 <body>
   <div class="wrap">
-    <img class="card-img" id="cardImg" src="card.jpg" alt="이상배 부산일보 기자 명함">
-    <a class="save" id="saveBtn" href="card.jpg" download="이상배_부산일보_명함.jpg">명함 사진 저장하기</a>
-    <p class="hint">버튼을 누른 뒤 '이미지 저장'을 선택하면 사진 앱에 저장됩니다.<br>안 되면 위 명함을 길게 눌러 '사진에 저장'을 선택하세요.</p>
+    <img class="card-img" src="card.jpg" alt="이상배 부산일보 기자 명함">
+    <p class="guide">위 명함을 <b>길게 눌러</b> '사진에 저장'을 선택하세요.</p>
   </div>
-
-<script>
-(function(){
-  var btn = document.getElementById('saveBtn');
-  var cardFile = null;
-  // 페이지 로드 시 이미지를 미리 받아 File로 준비 (탭 제스처 유지를 위해)
-  fetch('card.jpg').then(function(r){ return r.blob(); }).then(function(b){
-    try { cardFile = new File([b], '이상배_부산일보_명함.jpg', { type: b.type || 'image/jpeg' }); } catch(e){}
-  }).catch(function(){});
-
-  btn.addEventListener('click', function(e){
-    // 모바일: 네이티브 공유/저장 시트 → '이미지 저장'으로 사진 앱에 저장
-    if (cardFile && navigator.canShare && navigator.canShare({ files: [cardFile] })) {
-      e.preventDefault();
-      navigator.share({ files: [cardFile] }).catch(function(){});
-      return;
-    }
-    // 미지원 시: 기본 download 동작(안드로이드=갤러리/다운로드, PC=파일 저장)으로 진행
-  });
-})();
-</script>
 </body>
 </html>
