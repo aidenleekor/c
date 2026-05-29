@@ -23,7 +23,7 @@
     background:linear-gradient(165deg,#1b2c4d 0%,#0d1526 70%);
     min-height:100vh; display:flex; justify-content:center;
     font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI",Roboto,sans-serif; }
-  .wrap{ width:100%; max-width:430px; padding:44px 18px 48px; }
+  .wrap{ width:100%; max-width:430px; padding:clamp(48px,12vh,120px) 18px 56px; }
 
   .flip{ position:relative; perspective:1400px; }
   .flip-inner{ position:relative; width:100%; aspect-ratio:1280/717;
@@ -50,7 +50,7 @@
     font-size:13px; font-weight:500; color:rgba(255,255,255,.62); line-height:1.6; }
   .guide b{ color:#9ec3ff; font-weight:700; }
 
-  .divider{ border:none; border-top:1.4px dashed rgba(255,255,255,.18); margin:34px 6px; }
+  .divider{ border:none; border-top:1.4px dashed rgba(255,255,255,.18); margin:72px 6px 34px; }
   .links{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:0; }
   .lbtn{ display:flex; align-items:center; justify-content:flex-start; gap:9px;
     background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); border-radius:14px;
